@@ -27,15 +27,21 @@ export default function MenuWrap() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/movies">
-                            <i className="bi bi-film" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
-                            - Películas
+                        <Link to="/usuarios">
+                            <i className="bi bi-person" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
+                            - Usuarios
                         </Link>
                     </li>
                     <li>
-                        <Link to="/genres">
+                        <Link to="/productos">
                             <i className="bi bi-person" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
-                            - Géneros
+                            - Productos
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/lastproduct">
+                            <i className="bi bi-person" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
+                            - Ultimo Producto
                         </Link>
                     </li>
                     <li>
