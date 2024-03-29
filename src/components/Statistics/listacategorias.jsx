@@ -15,7 +15,7 @@ function Categories(){
 
     for (const categoria in productos.countByCategory) {
         listCategorias.push(<li key={categoria} >
-           {categoria}:{productos.countByCategory[categoria]}
+           {categoria}: {productos.countByCategory[categoria]}
          </li>);
     }
 
