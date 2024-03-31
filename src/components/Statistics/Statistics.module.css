@@ -1,3 +1,66 @@
+.contentStatistic {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+}
+
+.titleStatistic{
+    color: black;  
+}
+
+.textStatistic{
+    text-align: center;
+    display: flex;
+    color: black;    
+}
+
+.box{
+    flex: 0 0 auto; 
+    width: calc(33.33% - 40px); 
+    margin-right: 20px; 
+}
+
+.box:last-child {
+    margin-right: 0; 
+}
+
+.infoBoxes {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;    
+}
+
+.infoboxes__icono {
+    font-size: 2.5rem;
+}
+
+.boxIcon {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;    
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.boxContent {
+    font-size: 1.2rem;
+    color: #333333;
+}
+ 
+.big {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color:black;    
+}
+
 .infoboxes__icono{
     font-size: 2.5rem;
 }
@@ -10,3 +73,4 @@ button a {
 button a:hover {
     text-decoration: underline;
 }
+

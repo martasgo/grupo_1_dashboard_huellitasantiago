@@ -1,6 +1,6 @@
-
 import { useEffect, useState } from "react";
-import Categories from './listacategorias';
+import Categories from './ListaCategorias';
+import style from './Statistics.module.css';
 
 function Statistics(){
     const [productos, setProductos] = useState([]);
@@ -15,68 +15,67 @@ function Statistics(){
                 setProductos(products)
                 // Calcular el total de propiedades
                 const propertiesCount = Object.keys(products.countByCategory).length;
-                setTotalProperties(propertiesCount);
-                
-          }
-          )
+                setTotalProperties(propertiesCount);                
+          })
           .catch (error => console.error (error));
-          },[]
-      )
+          },[])
 
       useEffect(()=> {
         fetch("http://localhost:3000/api/users")
           .then((respuesta) => respuesta.json())
           .then((result) => {setUsuarios(result)})
           .catch (error => console.error (error));
-          },[]
-      )
-
-    return(
-        <main className="content-wrap">
+          },[])
+    return(        
         <section className="content">
-            <h2 className="mt-3">Estadísticas</h2>
-            <div className="info-boxes">
-                <div className="info-box">
-                    <div className="box-icon">
-                        <i className="bi bi-film" ></i>
+            <h2 className={style.titleStatistic}>Estadísticas</h2>
+            <br/>
+            <section className={style.contentStatistic}>
+             <div className={`${style.infoBoxes} ${style.box}`}>
+                <div className={style.infoBox}>
+                    <div className={style.boxIcon}>
+                        <i className="bi bi-basket" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
                     </div>
 
-                    <div className="box-content">
-                        <span className="big">{productos.count}</span>
-                        Total de productos
+                    <div className={style.boxContent}>
+                        <span className={style.big}>{productos.count}</span>
+                        <hr/>
+                        <p className={style.textStatistic}><b>Total de productos</b></p>
                     </div>
                 </div>
            </div>
-           <div className="info-boxes">
-                <div className="info-box">
-                    <div className="box-icon">
-                        <i className="bi bi-film" ></i>
+           <div className={`${style.infoBoxes} ${style.box}`}>
+                <div className={style.infoBox}>
+                    <div className={style.boxIcon}>
+                    <i className="bi bi-list-stars" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
                     </div>
 
-                    <div className="box-content">
-                        <span className="big">{totalProperties}</span>
-                        Total de categorias
+                    <div className={style.boxContent}>
+                        <span className={style.big}>{totalProperties}</span>
+                        <hr/>
+                        <p className={style.textStatistic}><b>Total de categorias</b></p>
                     </div>
                 </div>
            </div>
-           <div className="info-boxes">
-                <div className="info-box">
-                    <div className="box-icon">
-                        <i className="bi bi-film" ></i>
+           <div className={`${style.infoBoxes} ${style.box}`}>
+                <div className={style.infoBox}>
+                    <div className={style.boxIcon}>
+                        <i className="bi bi-people" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
                     </div>
 
-                    <div className="box-content">
-                        <span className="big">{usuarios.count}</span>
-                        Total de Usuarios
+                    <div className={style.boxContent}>
+                        <span className={style.big}>{usuarios.count}</span>
+                        <hr/>
+                        <p className={style.textStatistic}><b>Total de Usuarios</b></p>
                     </div>
                 </div>
            </div>
-
-           <h2 className="mt-3">DETALLE CATEGORIAS</h2>
+           </section>
+           <hr/>
+           <h2 className={style.textStatistic}>Detalle Categorías</h2>
+           <br/>
            <Categories/>
-
-        </section>
-        </main>
+        </section>       
     )
 }
 

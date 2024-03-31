@@ -26,23 +26,23 @@ const [pagina, setPagina] = useState(1);
   };
     
 return (
-    <section className="content">
-        <h2 className="mt-3">Listado de usuarios</h2>
-        
+    <section className={style.contentUsers}>
+       <h2 className={style.listTitle}>Listado de usuarios</h2>        
         {usuarios.map((user) => (
             <ListadoUsuarios usuario={user} key={user.id} />
         ))}
-
         <br />
+        <div className={style.buttonContainerUser}>
         {pagina > 1 && (
-          <button onClick={previousPage}>Página Anterior</button>
+          <button className={style.prevButtonUser}
+          disabled={pagina === 1} onClick={previousPage}>Página Anterior</button>
         )}
         <br />
         <br />
         {usuarios.length === 2 && (
-          <button onClick={nextPage}>Página Siguiente</button>
+          <button className={style.nextButtonUser} onClick={nextPage}>Página Siguiente</button>
         )}
-
+        </div>
     </section>
   )
 }

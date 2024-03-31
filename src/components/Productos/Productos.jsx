@@ -25,34 +25,36 @@ function Productos() {
     }
   };
 
-  return (
-    <main className="content-wrap">
-      <section className="content">
-        <h2 className="mt-3">Listado de productos</h2>
-        <table className={style.table}>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Nombre</th>
-              <th>Categoria</th>
-              <th>Detalle</th>
-            </tr>
-          </thead>
-          {articulos.map((articulo) => (
-            <ListadoProd producto={articulo} key={articulo.id} />
-          ))}
-        </table>
+  return (    
+      <section className={style.contentProduct}>        
+        <h2 className={style.titleProd}>Listado de productos</h2>
+              <br/>
+              <table className={style.table}>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Detalle</th>
+                  </tr>
+                </thead>
+                {articulos.map((articulo) => (
+                  <ListadoProd producto={articulo} key={articulo.id} />
+                ))}
+              </table>
         <br />
+        <div className={style.buttonContainer}>
         {pagina > 1 && (
-          <button onClick={previousPage}>Página Anterior</button>
+          <button className={style.prevButton}
+          disabled={pagina === 1} onClick={previousPage}>Página Anterior</button>
         )}
         <br />
         <br />
         {articulos.length === 10 && (
-          <button onClick={nextPage}>Página Siguiente</button>
+          <button className={style.nextButton} onClick={nextPage}>Página Siguiente</button>
         )}
-      </section>
-    </main>
+        </div>
+      </section>    
   );
 }
 

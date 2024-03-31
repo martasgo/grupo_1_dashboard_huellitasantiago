@@ -1,0 +1,44 @@
+.userListContent {
+    display: flex;     
+    align-items: flex-start;    
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+
+.userList {
+    display: flex;     
+    text-align: right;    
+    width: 80%;
+    margin:auto;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+  
+.userList li {    
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px;
+}
+
+.textUser{
+    color: black;
+    padding: 0;
+    margin: 0;    
+    margin-left: 10px;
+    text-align: left;    
+}
+
+.userItem {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin:auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+}

@@ -3,22 +3,22 @@ export default function SearchWrap(){
 		<aside className="search-wrap">
 			<div className="search">
 				<label htmlFor="search">
-					<i className="bi bi-search" style={{fontSize: "1.5rem", color: "cornflowerblue"}}></i>
+					<i className="bi bi-search" style={{fontSize: "1.5rem", color: "black"}}></i>
 					<input type="text" id="search"/>
 				</label>
 			</div>
 
 			<div className="user-actions">
 				<button>
-					<a href="#"><i className="bi bi-person-add" style={{fontSize: "1.5rem", color: "cornflowerblue"}}></i></a>
+					<a href="#"><i className="bi bi-person-add" style={{fontSize: "1.5rem", color: "black"}}></i></a>
 				</button>
 				<button>
 					<a href="#"><i className="bi bi-person"
-							style={{fontSize: "1.5rem", color: "cornflowerblue"}}></i></a>
+							style={{fontSize: "1.5rem", color: "black"}}></i></a>
 				</button>
 				<button>
 					<a href="#"><i className="bi bi-box-arrow-right"
-							style={{fontSize: "1.5rem", color: "cornflowerblue"}}></i></a>
+							style={{fontSize: "1.5rem", color: "black"}}></i></a>
 				</button>
 			</div>
 		</aside>

@@ -1,0 +1,38 @@
+.container {
+    background-color: #f8f9fa;
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.titleLastProd {
+    font-size: 1.5rem; 
+    margin-bottom: 20px; 
+    color: black; 
+}
+
+.nameLastProd {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: black; 
+}
+
+.description {
+    font-size: 1rem; 
+    margin-bottom: 10px; 
+    color: black; 
+}
+
+.categProd{
+    color:black; 
+}
+
+.detailLink {
+    color: #6dbd9bff;     
+    font-weight: bold; 
+}
+
+.detailLink:hover {
+    color:#18c1d8ff;
+}

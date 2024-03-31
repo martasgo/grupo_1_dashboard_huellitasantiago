@@ -9,14 +9,12 @@ function DetalleUsuario(props){
         fetch(`http://${props.link}`)
           .then((respuesta) => respuesta.json())
           .then((result) => 
-          setUsuario(result)
-          );
-      },[]
-    )
+          setUsuario(result))
+          .catch((error) => console.error(error));
+      },[]);
         
     return (
-
-            <section className="content">
+            <section className={style.contentDetalleUsuario}>
                 <img className={style.resizeImg} src={`http://localhost:3000/images/usuarios/${usuario.imagen}`} alt=""/>
             </section>
 
