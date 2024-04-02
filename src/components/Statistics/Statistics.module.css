@@ -18,7 +18,6 @@
 
 .box{
     flex: 0 0 auto; 
-    width: calc(33.33% - 40px); 
     margin-right: 20px; 
 }
 
