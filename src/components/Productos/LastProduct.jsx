@@ -6,28 +6,23 @@ export default function LastProduct(){
     let categoriaProd = [];
 
     useEffect(()=> {
-      fetch("http://localhost:3000/api/products")
+      fetch("http://localhost:3000/api/lastproduct")
         .then((respuesta) => respuesta.json())
-        .then((products) => {
-            let lastIndex = products.products.length;            
-            setLastProduct(products.products[lastIndex-1]);
-        })
+        .then((product) => setLastProduct(product))
         .catch (error => console.error(error));
     },[])
 
-  for (const categoria in lastProduct.categories) {
-    categoriaProd.push(<li style={{ listStyleType: 'none'}} key={categoria.id} >
-      <p className={style.categProd}><strong>Categoría:</strong> {lastProduct.categories[categoria].nombre}</p>
-     </li>);  
-}
-      return(
+    let categoryName;
+    if (lastProduct && lastProduct.categories) {
+        categoryName = lastProduct.categories.nombre;
+    }
+
+    return(
         <div className={style.container}>
             <h3 className={style.titleLastProd}><strong>Último producto creado:</strong></h3>
-            <p className={style.nameLastProd}>{lastProduct.name}</p>
-            <p className={style.description}><strong>Descripción:</strong> {lastProduct.description}.</p>
-            <br/>
-            {categoriaProd}
-            
+            <p className={style.nameLastProd}>{lastProduct.nombre}</p>
+            <p className={style.description}><strong>Descripción:</strong> {lastProduct.descripcion}.</p>
+            <p className={style.description}><strong>Categoría: </strong>{categoryName}</p> 
             <p>
                 <a href={`/productos/${lastProduct.id}`} className={style.detailLink}>Ver más detalle</a>
             </p>

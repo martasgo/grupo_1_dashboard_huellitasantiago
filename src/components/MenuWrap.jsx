@@ -1,5 +1,5 @@
-import logo from '../assets/img/logo.png'
-import { Link } from 'react-router-dom'
+import logo from '../assets/img/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function MenuWrap() {
 
@@ -32,6 +32,12 @@ export default function MenuWrap() {
                             - Usuarios
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/lastuser">
+                            <i className="bi bi-skip-end" style={{fontSize: "1.2rem", color: "#18c1d8ff"}}></i>
+                            - Último Usuario
+                        </Link>
+                    </li> 
                     <li>
                         <Link to="/productos">
                             <i className="bi bi-basket" style={{fontSize: "1.2rem", color: "#18c1d8ff"}}></i>

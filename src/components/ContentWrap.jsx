@@ -5,6 +5,7 @@ import Productos from "./Productos/Productos";
 import DetalleProducto from "./Productos/DetalleProducto";
 import LastProduct from "./Productos/LastProduct";
 import Clientes from "./Usuarios/Usuarios";
+import LastUser from "./Usuarios/LastUser";
 import Statistics from "./Statistics/Statistics";
 import Error404 from "./Error404";
 
@@ -17,7 +18,8 @@ export default function ContentWrap() {
           <Route path="/productos" exact element={<Productos />} />
           <Route path="/productos/:idProd" exact element={<DetalleProducto />} />
           <Route path="/lastproduct" exact element={<LastProduct />} />
-          <Route path="/usuarios" exact element={<Clientes />} />          
+          <Route path="/usuarios" exact element={<Clientes />} />   
+          <Route path="/lastuser" exact element={<LastUser />} />       
           <Route
             path="/statistics"
             element={

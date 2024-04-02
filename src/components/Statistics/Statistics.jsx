@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import Categories from './ListaCategorias';
 import style from './Statistics.module.css';
+import Ventas from '../Ventas/Ventas';
 
 function Statistics(){
     const [productos, setProductos] = useState([]);
     const [usuarios, setUsuarios] = useState([]);
     const [totalProperties, setTotalProperties] = useState(0);
+    const [ventas, setVentas] = useState([]);
 
       useEffect(()=> {
         fetch("http://localhost:3000/api/products")
@@ -26,9 +28,17 @@ function Statistics(){
           .then((result) => {setUsuarios(result)})
           .catch (error => console.error (error));
           },[])
+    
+    useEffect(()=> {
+        fetch("http://localhost:3000/api/sales")
+            .then((respuesta) => respuesta.json())
+            .then((result) => {setVentas(result)})
+            .catch (error => console.error (error));
+            },[])
+
     return(        
         <section className="content">
-            <h2 className={style.titleStatistic}>Estadísticas</h2>
+            <h2 className={style.titleStatistic}>Estadísticas Generales de Usuarios y Productos</h2>
             <br/>
             <section className={style.contentStatistic}>
              <div className={`${style.infoBoxes} ${style.box}`}>
@@ -71,10 +81,20 @@ function Statistics(){
                 </div>
            </div>
            </section>
+           
            <hr/>
-           <h2 className={style.textStatistic}>Detalle Categorías</h2>
+           <h2 className={style.textStatistic}>Detalle de Categorías</h2>
            <br/>
            <Categories/>
+
+           <hr/>
+           <section>
+            <div>
+                <h2 className={style.textStatistic}>Estadística de Ventas</h2>
+                <br/>
+                <Ventas />
+            </div>
+           </section>
         </section>       
     )
 }
