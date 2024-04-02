@@ -14,9 +14,15 @@ function DetalleUsuario(props){
       },[]);
         
     return (
-            <section className={style.contentDetalleUsuario}>
+            <>
+                <p className={style.titleDetail} ><strong>Detalles de usuario</strong></p>
+                <br/>
+                <p className={style.textUser} ><strong>Dirección:</strong> {usuario.direccion}</p>
+                <p className={style.textUser}><strong>Teléfono:</strong> {usuario.telefono}</p>
+                <p className={style.textUser} ><strong>Categoría:</strong> { usuario.categoria === 1 ? 'Administrador' : 'Cliente'}</p>
+                <br/>
                 <img className={style.resizeImg} src={`http://localhost:3000/images/usuarios/${usuario.imagen}`} alt=""/>
-            </section>
+            </>
 
       )
     }

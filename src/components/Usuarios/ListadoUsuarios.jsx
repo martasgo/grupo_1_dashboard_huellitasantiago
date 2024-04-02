@@ -7,8 +7,7 @@ export default function ListadoUsuarios(props) {
             <ul className={style.userList}>
                 <li className={style.userItem}>                     
                     <p className={style.textUser}><strong>Usuario Nro:</strong> {props.usuario.id}</p>
-                    <p className={style.textUser}> {props.usuario.name} {props.usuario.apellido}</p>
-                    <p className={style.textUser}> <strong>Email:</strong> {props.usuario.email}</p>
+                    <p className={style.textUser}> {props.usuario.name} {props.usuario.apellido} - <strong>Email:</strong> {props.usuario.email}</p>
                     <br/>
                     <DetalleCliente link={props.usuario.detail} key={props.usuario.id}/> 
                 </li>                
