@@ -8,7 +8,7 @@ export default function LastUser(){
       
       fetch("http://localhost:3000/api/lastuser")
         .then((respuesta) => respuesta.json())
-        .then((user) => setLastUser(user))
+        .then((user) => setLastUser(user.lastUser))
         .catch (error => console.error(error));
     },[])
 
