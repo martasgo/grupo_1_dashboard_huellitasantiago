@@ -19,8 +19,7 @@ export default function LastProduct(){
 
     return(
         <div className={style.container}>
-            <h3 className={style.titleLastProd}><strong>Último producto creado:</strong></h3>
-            <p className={style.nameLastProd}>{lastProduct.nombre}</p>
+            <h3 className={style.titleLastProd}><strong>Último producto creado:</strong> {lastProduct.nombre}</h3>
             <p className={style.description}><strong>Descripción:</strong> {lastProduct.descripcion}.</p>
             <p className={style.description}><strong>Categoría: </strong>{categoryName}</p> 
             <p>
