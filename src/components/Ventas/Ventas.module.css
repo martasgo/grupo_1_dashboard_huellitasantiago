@@ -58,3 +58,10 @@
     border-radius: 5px;
     color: black
 }
+
+.iconosVentas{
+    font-size: 1.5rem;
+    color: #6dbd9bff; 
+    margin-right: 1.5px;
+    padding-right: 5px
+}

@@ -44,7 +44,7 @@ function Statistics(){
              <div className={`${style.infoBoxes} ${style.box}`}>
                 <div className={style.infoBox}>
                     <div className={style.boxIcon}>
-                        <i className="bi bi-basket" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
+                        <i className={`bi bi-basket ${style.iconos}`}></i>
                     </div>
 
                     <div className={style.boxContent}>
@@ -57,7 +57,7 @@ function Statistics(){
            <div className={`${style.infoBoxes} ${style.box}`}>
                 <div className={style.infoBox}>
                     <div className={style.boxIcon}>
-                    <i className="bi bi-list-stars" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
+                    <i className={`bi bi-list-stars ${style.iconos}`} ></i>
                     </div>
 
                     <div className={style.boxContent}>
@@ -70,7 +70,7 @@ function Statistics(){
            <div className={`${style.infoBoxes} ${style.box}`}>
                 <div className={style.infoBox}>
                     <div className={style.boxIcon}>
-                        <i className="bi bi-people" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i>
+                        <i className={`bi bi-people ${style.iconos}`} ></i>
                     </div>
 
                     <div className={style.boxContent}>

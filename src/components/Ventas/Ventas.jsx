@@ -10,25 +10,29 @@ function Ventas() {
         .then((sales) => setSales(sales))
         .catch((error) => console.error(error));
     }, []);
-   
-  
+
     return (    
         <div className={style.divGeneralVentas}>
             <div className={style.divDatosVentas}>
                 <div className={style.divVentas}>
                     <span className={style.dataVentas}>{sales.totalItems}</span>
                     <hr/>
-                    <p className={style.textVentas}><i class="fas fa-cat" style={{fontSize: "2.5rem", color: "#6dbd9bff"}}></i><b>Total de productos vendidos</b></p>
+                    <p className={style.textVentas}><i className={`fas fa-cat ${style.iconosVentas}`} ></i><b>Total de productos vendidos</b></p>
                 </div>
                 <div className={style.divVentas}>
                     <span className={style.dataVentas}>$ {sales.totalSales}</span>
                     <hr/>
-                    <p className={style.textVentas}><i class="fas fa-hand-holding-usd" style={{fontSize: "2.5rem", color: "#6dbd9bff", marginRight: "1.5px"}}></i><b>Monto total de ventas</b></p>
+                    <p className={style.textVentas}><i className={`fa-solid fa-dollar-sign ${style.iconosVentas}`} ></i><b>Monto total de ventas</b></p>
+                </div>
+                <div className={style.divVentas}>
+                    <span className={style.dataVentas}>{sales.totalNumberSales}</span>
+                    <hr/>
+                    <p className={style.textVentas}><i className={`fa-solid fa-hashtag ${style.iconosVentas}`} ></i><b>Total de ventas</b></p>
                 </div>
             </div>
             
             <div className={style.divListados}>
-                <p className={style.textVentas}><i class="far fa-star" style={{fontSize: "2.5rem", color: "#6dbd9bff", marginRight: "1.5rem"}}></i><b>5 Productos más vendidos</b></p>
+                <p className={style.textVentas}><i className={`far fa-star ${style.iconosVentas}`} ></i><b>5 Productos más vendidos</b></p>
                 <hr/>
                 <div>
                 {sales && sales.totalProducts && sales.totalProducts.length > 0 ? (
@@ -45,7 +49,7 @@ function Ventas() {
                 </div>
             </div>
             <div className={style.divListados}>
-                <p className={style.textVentas}><i class="fas fa-calendar-alt" style={{fontSize: "2.5rem", color: "#6dbd9bff", marginRight: "1.5rem"}}></i><b>Últimos 5 productos vendidos</b></p>
+                <p className={style.textVentas}><i className={`fas fa-calendar-alt ${style.iconosVentas}`} ></i><b>Últimos 5 productos vendidos</b></p>
                 <hr/>
                 <div>
                 {sales && sales.lastSoldProducts && Object.values(sales.lastSoldProducts).length > 0 ? (
