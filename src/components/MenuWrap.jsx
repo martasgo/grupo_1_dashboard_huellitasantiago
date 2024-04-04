@@ -1,5 +1,6 @@
-import logo from '../assets/img/logo.png'
-import { Link } from 'react-router-dom'
+import logo from '../assets/img/logo.png';
+import { Link } from 'react-router-dom';
+import style from "./MenuWrap.module.css";
 
 export default function MenuWrap() {
 
@@ -7,7 +8,7 @@ export default function MenuWrap() {
         <header className="menu-wrap">
         <figure className="user">
             <div className="user-avatar">
-            <Link to="/movies"> 
+            <Link to="/"> 
                 <img src={logo} alt="Logo Huellitas"/>
             </Link>            
             </div>
@@ -18,48 +19,48 @@ export default function MenuWrap() {
         </figure>
         <nav>
             <section className="dicover">
-                <h3>Opciones</h3>
+                <h3 style={{color: "black"}}>Opciones</h3>
                 <ul>
                 <li>
                     <Link to="/">
-                            <i className="bi bi-house" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
+                            <i className={`bi bi-house ${style.iconos}`} ></i>
                             - Home
                         </Link>
                     </li>
                     <li>
-                        <Link to="/movies">
-                            <i className="bi bi-film" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
-                            - Películas
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/genres">
-                            <i className="bi bi-person" style={{fontSize: "1.2rem", color: "cornflowerblue"}}></i>
-                            - Géneros
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/maspopulares">
-                            <i className="bi bi-bar-chart"></i>
-                            - Más populares
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i className="bi bi-tags"></i>
-                            - Promociones
-                        </a>
-                    </li>
-                    <li>
                         <Link to="/statistics">
-                            <i className="bi bi-graph-up"></i>
+                            <i className={`bi bi-graph-up ${style.iconos}`} ></i>
                             - Estadísticas
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/usuarios">
+                            <i className={`bi bi-person ${style.iconos}`}></i>
+                            - Usuarios
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/lastuser">
+                            <i className={`bi bi-skip-end ${style.iconos}`}  ></i>
+                            - Último Usuario
+                        </Link>
+                    </li> 
+                    <li>
+                        <Link to="/productos">
+                            <i className={`bi bi-basket ${style.iconos}`}  ></i>
+                            - Productos
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/lastproduct">
+                            <i className={`bi bi-skip-end ${style.iconos}`}  ></i>
+                            - Último Producto
+                        </Link>
+                    </li>        
+                    
                 </ul>
             </section>
         </nav>
     </header>
-    )
-    
+    )    
 }
