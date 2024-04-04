@@ -27,6 +27,12 @@ export default function MenuWrap() {
                         </Link>
                     </li>
                     <li>
+                        <Link to="/statistics">
+                            <i className="bi bi-graph-up" style={{fontSize: "1.2rem", color: "#18c1d8ff"}}></i>
+                            - Estadísticas
+                        </Link>
+                    </li>
+                    <li>
                         <Link to="/usuarios">
                             <i className="bi bi-person" style={{fontSize: "1.2rem", color: "#18c1d8ff"}}></i>
                             - Usuarios
@@ -50,12 +56,7 @@ export default function MenuWrap() {
                             - Último Producto
                         </Link>
                     </li>        
-                    <li>
-                        <Link to="/statistics">
-                            <i className="bi bi-graph-up" style={{fontSize: "1.2rem", color: "#18c1d8ff"}}></i>
-                            - Estadísticas
-                        </Link>
-                    </li>
+                    
                 </ul>
             </section>
         </nav>
