@@ -1,0 +1,26 @@
+.listTitle{
+    color:black;
+}
+
+.contentUser {
+    text-align: center; 
+}
+
+.buttonContainerUser{
+    display: flex;
+    justify-content: center;
+}
+
+.prevButtonUser, .nextButtonUser {
+    margin: 10px;
+    background-color: #6dbd9bff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.prevButtonUser:hover, .nextButtonUser:hover{
+    background-color: #fbdd5bff;
+}
