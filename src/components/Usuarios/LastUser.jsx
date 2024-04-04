@@ -19,10 +19,12 @@ export default function LastUser(){
 
     return(
         <div className={style.container}>
-            <h3 className={style.titleLastUser}><strong>Último usuario creado:</strong></h3>
-            <p className={style.nameLastUser}>{lastUser.nombre} {lastUser.apellido}</p>
+            <h3 className={style.titleLastUser}><strong>Último usuario creado:</strong> {lastUser.nombre} {lastUser.apellido}</h3>
             <p className={style.description}><strong>Email:</strong> {lastUser.email}.</p>
             <p className={style.description}><strong>Categoría:</strong> {categoryName}</p>
+            <p className={style.description}><strong>Dirección:</strong> {lastUser.direccion}</p>
+            <p className={style.description}><strong>Teléfono:</strong> {lastUser.telefono}</p>
+            <p className={style.description}><strong>Estado:</strong> { lastUser.activo === 1 ? 'Activo' : 'Inactivo'}</p>
             <img className={style.resizeImgUser} src={`http://localhost:3000/images/usuarios/${lastUser.imagen}`} alt=""/>
         </div>
     )
