@@ -38,7 +38,7 @@ function Statistics(){
 
     return(        
         <section className="content">
-            <h2 className={style.titleStatistic}>Estadísticas Generales de Usuarios y Productos</h2>
+            <h2 className={style.titleStatistic}>Estadísticas generales de usuarios y productos</h2>
             <br/>
             <section className={style.contentStatistic}>
              <div className={`${style.infoBoxes} ${style.box}`}>
@@ -63,7 +63,7 @@ function Statistics(){
                     <div className={style.boxContent}>
                         <span className={style.big}>{totalProperties}</span>
                         <hr/>
-                        <p className={style.textStatistic}><b>Total de categorias</b></p>
+                        <p className={style.textStatistic}><b>Total de categorías</b></p>
                     </div>
                 </div>
            </div>
@@ -76,21 +76,21 @@ function Statistics(){
                     <div className={style.boxContent}>
                         <span className={style.big}>{usuarios.count}</span>
                         <hr/>
-                        <p className={style.textStatistic}><b>Total de Usuarios</b></p>
+                        <p className={style.textStatistic}><b>Total de usuarios</b></p>
                     </div>
                 </div>
            </div>
            </section>
            
            <hr/>
-           <h2 className={style.textStatistic}>Detalle de Categorías</h2>
+           <h2 className={style.textStatistic}>Cantidad de productos por categoría</h2>
            <br/>
            <Categories/>
 
            <hr/>
            <section>
             <div>
-                <h2 className={style.textStatistic}>Estadística de Ventas</h2>
+                <h2 className={style.textStatistic}>Estadísticas de ventas</h2>
                 <br/>
                 <Ventas />
             </div>

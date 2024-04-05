@@ -19,7 +19,7 @@ export default function MenuWrap() {
         </figure>
         <nav>
             <section className="dicover">
-                <h3 style={{color: "black"}}>Opciones</h3>
+                <h3 className={style.titulo}>Opciones</h3>
                 <ul>
                 <li>
                     <Link to="/">
