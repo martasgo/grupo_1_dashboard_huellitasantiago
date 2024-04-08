@@ -5,7 +5,6 @@ function DetalleUsuario(props){
     const [usuario, setUsuario] = useState([]);
     
       useEffect(()=> {
-        console.log(props.link)
         fetch(`http://${props.link}`)
           .then((respuesta) => respuesta.json())
           .then((result) => 
